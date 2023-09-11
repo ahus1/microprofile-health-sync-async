@@ -13,6 +13,6 @@ public class AsyncHealthCheck implements io.smallrye.health.api.AsyncHealthCheck
 
     @Override
     public Uni<HealthCheckResponse> call() {
-        return Uni.createFrom().item(HealthCheckResponse.up("Simple ASYNC health check")).onItem().delayIt().by(Duration.ofMillis(1000));
+        return Uni.createFrom().item(HealthCheckResponse.up("Simple ASYNC health check"));
     }
 }
