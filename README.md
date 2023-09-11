@@ -2,6 +2,12 @@
 
 Small demo about sync and async health checks, accompanying https://github.com/quarkusio/quarkus/pull/35100
 
+Once packaged, debug with: 
+
+```shell script
+java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -jar target/quarkus-app/quarkus-run.jar
+```
+
 ## Running the application in dev mode
 
 You can run your application in dev mode that enables live coding using:
